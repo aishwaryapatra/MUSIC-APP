@@ -1,10 +1,10 @@
 # MUSIC-APP
 
 Tools and Technology:-
-ANGULAR 8,Bootstrap
-SPRING BOOT
-MYSQL,MONGODB
-DOCKER and MICROSERVICES
+ANGULAR 8,Bootstrap,
+SPRING BOOT,
+MYSQL,MONGODB,
+DOCKER and MICROSERVICES.
 
 Functionality:-
 A web application which plays both audio and video.
