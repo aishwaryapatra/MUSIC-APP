@@ -1,0 +1,30 @@
+<link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <mat-sidenav-container class="side-opended">
+    <mat-sidenav  mode = "side" opened >
+      <mat-nav-list class="side-opended">
+        <a class="config"><img [src]=this.imgURL alt="Avatar" class="avatar" ></a>
+
+        <!-- <a mat-list-item [routerLink]="'/home'"><h4> Home </h4></a> -->
+        <a mat-list-item [routerLink]="'./'"><h4> Profile </h4></a>
+        <a mat-list-item [routerLink]="'./favourites'"> <h4>Favourites </h4> </a>
+        <a mat-list-item [routerLink]="'./recommendation'"><h4> Recommendation</h4> </a>
+        <a mat-list-item [routerLink]="'./countrycode'"><h4> Country Special</h4> </a>
+        <!-- <a mat-list-item (click)="logout()" [routerLink]="'/home'"><h4>Logout</h4> </a> -->
+
+
+  
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div style="height: 88vh;">
+  
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>  
+  <!-- <app-footer-comp></app-footer-comp> -->
+
+  
+ 
+

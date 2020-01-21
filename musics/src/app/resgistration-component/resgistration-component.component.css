@@ -1,0 +1,45 @@
+h1
+{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+}
+hr{
+    width:120px;
+}
+form{
+    text-align: center !important;
+   
+}
+.ht{
+    height: 100vh !important;
+}
+/* .gender
+{
+    size: 10cm;
+} */
+.b
+{
+    width:50px;
+    height:25px;
+}
+.a
+{
+    width:220px;
+    height:25px;
+}
+button{
+    width:120px;
+    height: 35px;;
+    border-radius:5px;
+}
+.card{
+    width:400px;
+    height: 60%;
+    background-color: blanchedalmond;
+    opacity: 0.8;
+    display: flex;
+    position: absolute;            /* 2 */
+    top: 50%; 
+    left:40%;                        /* 3 */
+    transform: translate(0, -50%) 
+}

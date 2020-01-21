@@ -1,0 +1,43 @@
+.cardstyle
+   {
+       color:black;
+        width:500px;
+       margin:4px !important;
+      background-color:rgb(221, 221, 101);
+      /* font-size:28px !important; */
+   }
+   .header
+   {
+         font-size:48px;
+   }
+   mat-expansion-panel
+   {
+       background-color:rgba(240, 240, 143, 0.986);
+   }
+   .img
+   {
+       padding-left: 70px;
+       width:350px;
+       height:300px;
+   }
+   .style
+   {
+   padding-left:100px;
+       margin: 0%;
+       font-size:25px;
+   }
+   section
+   {
+       display: flex;
+       /* flex-direction: row; */
+   }
+   *
+   {
+    font-family: 'Cookie', cursive;
+    font-size:20px;
+   }
+   .page {
+    display: flex !important;
+    justify-content: center !important;
+    padding-top: 30px;
+}

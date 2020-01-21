@@ -1,0 +1,39 @@
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<div class="ht">
+<div class="card">
+<h1>Login <i class="fa fa-user" aria-hidden="true"></i></h1>
+<hr/>
+<br/>
+<br/>
+<form [formGroup]="loginForm" (ngSubmit)="submit()" class="design">
+    <div class="form-group">
+        <label for="firstName"> <i class="material-icons">
+                email
+                </i> &nbsp;
+        <input type="text" formControlName="email" class="form-control email" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" placeholder="Enter registered email"/>
+        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+            <div *ngIf="f.firstName.errors.required">Email is required</div>
+        </div>
+    </label>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="lastName"> <i class="fa fa-pencil-square-o lastName" aria-hidden="true"></i>&nbsp;
+        <input type="password" formControlName="password" class="form-control password" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" placeholder="Enter your password" />
+        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+            <div *ngIf="f.lastName.errors.required"> Password is required</div>
+        </div>
+    </label>
+</div>
+<br/>
+<div class="form-group">
+    <button [disabled]="loading" class="btn btn-primary design">Login <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+    <br>
+    Create an account<a [routerLink]="'../register'">Resgister</a>
+</div>
+</form>
+</div>
+</div>
+<!-- <app-footer-comp></app-footer-comp> -->

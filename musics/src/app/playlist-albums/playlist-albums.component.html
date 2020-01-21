@@ -1,0 +1,50 @@
+<link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div>
+<h1>Escape the stress of today with our BEats!</h1>
+
+<section class="playlistalbum-section">
+    <mat-card class="cardstyle" *ngFor="let item of arr | paginate: { itemsPerPage:3, currentPage:p}" >
+        <mat-card-title>{{item.name}}</mat-card-title>
+        <mat-card-subtitle><mat-icon>grade</mat-icon>{{item.fav_count}}</mat-card-subtitle>
+        <mat-card-content ><img src="{{item.image}}"></mat-card-content>
+        <mat-card-content>
+            <mat-expansion-panel>
+               <mat-expansion-panel-header>
+                  <mat-panel-title>
+                     Featured tracks
+                  </mat-panel-title>
+               </mat-expansion-panel-header>
+               <mat-card>
+               <mat-card-content>{{item.track_name[0]}}</mat-card-content>
+               <mat-card-content>
+                  <audio controls >
+                     <source src="{{item.mp3_url[0]}}" type="audio/mp3"  >
+                 </audio>
+               </mat-card-content>
+               </mat-card>
+               <mat-card>
+                  <mat-card-content>{{item.track_name[1]}}</mat-card-content>
+                  <mat-card-content>
+                        <audio controls >
+                              <source src="{{item.mp3_url[1]}}" type="audio/mp3"  >
+                          </audio>
+                     </mat-card-content>
+            </mat-card>
+               <mat-card>
+                  <mat-card-content> {{item.track_name[2]}}</mat-card-content>
+                  <mat-card-content>
+                        <audio controls >
+                              <source src="{{item.mp3_url[2]}}" type="audio/mp3"  >
+                          </audio>
+                     </mat-card-content>
+            </mat-card>
+               </mat-expansion-panel>
+               </mat-card-content>
+    </mat-card>
+</section>
+<div class="page">
+ <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+</div>
+

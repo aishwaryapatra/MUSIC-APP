@@ -1,0 +1,83 @@
+<link href="https://fonts.googleapis.com/css?family=Cookie|Satisfy&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+<h1 style="text-align: center;" style="font-size:50px;text-align: center;">Explore Songs of Different Countries</h1>
+<br />
+<section>
+   <!-- *ngFor="let i of 4 | paginate: { itemsPerPage:2, currentPage:p}" -->
+<mat-card class="cardstyle card-deck" >
+   <mat-card-header>
+      <mat-card-title class="style">Bollywood</mat-card-title>
+   </mat-card-header>
+   <img mat-card-image class="img" src="../assets/bollywood.jpeg" alt="Bollywood">
+   <mat-card-content class="panel">
+      <mat-expansion-panel >
+         <mat-expansion-panel-header>
+            <mat-panel-title>
+               Featured tracks
+            </mat-panel-title>
+         </mat-expansion-panel-header>
+         <div *ngFor="let item of array">
+            <mat-card class="inner">
+            Song : {{item.name}}
+            Artist : {{item.artist}}
+            <audio controls id="{{item.artistSongName}}">
+                  <source src="{{item.previewURL}}" type="audio/mp3"  >
+              </audio>
+            </mat-card>
+            <br/>
+         </div>
+      </mat-expansion-panel>
+   </mat-card-content>
+</mat-card>
+  <mat-card class="cardstyle card-deck">
+      <mat-card-header>
+         <mat-card-title class="style">Spanish</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image class="img" src="../assets/spanish.jpg" alt="Spanish">
+      <mat-card-content>
+         <mat-expansion-panel>
+            <mat-expansion-panel-header>
+               <mat-panel-title>
+                  Featured tracks
+               </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div *ngFor="let item of arrayS">
+               <mat-card>
+               Song : {{item.name}}
+               Artist : {{item.artist}}
+               <audio controls id="{{item.artistSongName}}">
+                     <source src="{{item.previewURL}}" type="audio/mp3"  >
+                 </audio>
+            </mat-card>
+               <br />
+            </div>
+         </mat-expansion-panel>
+      </mat-card-content>
+   </mat-card>
+<mat-card class="cardstyle card-deck">
+      <mat-card-header>
+         <mat-card-title class="style">Arabic</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image class="img" src="../assets/arabic.jpg" alt="Bollywood">
+      <mat-card-content>
+         <mat-expansion-panel>
+            <mat-expansion-panel-header>
+               <mat-panel-title>
+                  Featured tracks
+               </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div *ngFor="let item of arrayA">
+               <mat-card>
+               Song : {{item.name}}
+               Artist : {{item.artist}}
+               <audio controls id="{{item.artistSongName}}">
+                     <source src="{{item.previewURL}}" type="audio/mp3"  >
+                 </audio>
+            </mat-card>
+               <br />
+            </div>
+         </mat-expansion-panel>
+      </mat-card-content>
+   </mat-card>
+
+</section>

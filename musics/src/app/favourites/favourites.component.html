@@ -1,0 +1,53 @@
+<link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<h1>Liked Songs</h1>
+<div class="container-table100">
+<div class="wrap-table100">
+<table class="table table-striped" style='color:whitesmoke;font-size:30px;' >
+      <thead style='background-color: black'>
+      <tr >
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Artist</th>
+        <th scope="col">Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of this.gettingFavListofLoggedUser; index as i">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>
+         
+          {{item.artistSongName}}
+        </td>
+        <td>{{item.artist_name}}</td>
+        <td>
+          <ul style="list-style-type:none;">
+            <li>
+                <!-- <a (click)="playSound(item.trackSingle)"> Play</a> -->
+              <audio controls id="{{item.artistSongName}}">
+                  <source src="{{item.trackSingle}}" type="audio/mp3"  >
+              </audio>
+            
+
+            </li>
+             <!-- <li>{{item.trackSingle}}</li> -->
+            <li><button mat-raised-button (click)="Onclick(item)">Comment</button></li>
+          </ul>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+   </div>
+<!-- <app-footer-comp></app-footer-comp> -->
+
+
+
+
+
+<!-- 
+
+ <mat-card class="cardstyle" *ngFor="let item of this.gettingFavListofLoggedUser">
+
+  <mat-card-title>{{item.albumSingle}}</mat-card-title>
+ 
+</mat-card> -->

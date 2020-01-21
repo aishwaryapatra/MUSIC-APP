@@ -1,0 +1,35 @@
+<link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div>
+  <h1  style="font-family: 'Courgette', cursive">
+    Make a comment  <i class="fa fa-comments" aria-hidden="true"></i></h1>
+  <hr />
+  <br />
+  <form [formGroup]="CommentForm" (ngSubmit)="submit()">
+    <label for="comment" style="font-family: 'Courgette', cursive"> Write A Comment: </label>
+    <br />
+    <input type="text" formControlName="comment" placeholder="Make A Comment" name="comment" class="comment">
+    <br />
+    <br />
+
+    <br />
+    <button onclick="submit">Post</button>
+  </form>
+  <br />
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>Show All Comments</mat-expansion-panel-header>
+    
+      <div  *ngFor="let item of temp" >
+          <mat-card class="card">
+        <i class="fa fa-user"></i> 
+        <mat-card-header>
+      <mat-card-subtitle class="size">{{item.emailUser}} wrote </mat-card-subtitle>
+    </mat-card-header>
+      <br />
+      <mat-card-content><p>{{item.comment}}</p></mat-card-content>
+    
+    </mat-card>
+  </div>
+  </mat-expansion-panel>
+</div>

@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+html, body { height: 100%; }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+background-image: url('./assets/y2.jpg') !important;
+background-repeat: no-repeat !important;
+background-size: cover;
+}
+body.navbar-is-fixed-top.node-type-that-uses-banner{
+    top: 0;
+    padding-top: 0 !important;
+}
+
+body.navbar-is-fixed-top.node-type-that-uses-banner header #navbar{
+    height: 120px;
+}
+
+.parallax-banner{
+    position: absolute;
+    top: 0;
+    padding: 120px 0 0; /* 120px = the height of the fixed header */
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:red;
+    /* background-image: url('./assets/y2.jpg') !important; */
+    opacity: 0.2;
+    color: white;
+    text-align: center;
+    height: 200px;;
+ }
+

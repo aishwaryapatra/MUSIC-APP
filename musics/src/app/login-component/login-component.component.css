@@ -1,0 +1,40 @@
+h1
+{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+}
+form{
+    text-align: center;
+}
+hr{
+    width:120px;
+}
+.lastName
+{
+    font-size: 0.7cm;;
+}
+input{
+    width:200px;
+    height:20px;
+}
+button{
+    width:80px;
+    height:25px;
+    
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:bold;
+}
+.card{
+    width:400px;
+    height: 400px;
+    background-color: blanchedalmond;
+    opacity: 0.8;
+    display: flex;
+    position: absolute;               /* 2 */
+    top: 35%; 
+    left:40%;                        /* 3 */
+    transform: translate(0, -50%) 
+}
+.ht{
+    height: 100vh !important;
+}

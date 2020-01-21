@@ -1,0 +1,27 @@
+img {
+    border-radius: 50%;
+    width:100%;
+    height:100%;
+  }
+.section{
+    display: flex;
+    flex-direction: column;
+}
+.card-group {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+h4,h5,p {
+    font-family: 'Courgette', cursive; 
+    font-size: 20px;
+  }
+.mat-tab-label{
+    font-family: 'Courgette', cursive !important; 
+
+
+}
+mat-tab-group{
+background-image: url('../../assets/y2.jpg');
+background-repeat: no-repeat !important;
+}

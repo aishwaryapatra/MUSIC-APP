@@ -1,0 +1,28 @@
+<link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<h1>New Genre</h1>
+<section class="newrelease-section">
+  
+        <mat-card class="cardstyle" *ngFor="let item of arr | paginate: { itemsPerPage:4, currentPage:p}">
+             
+            <mat-card-title>{{item.album_name}}</mat-card-title>
+            <mat-card-content  class="marginmatcard"><img src="{{item.image}}">
+         
+
+                    <audio controls >
+                            <source src="{{item.mp3url}}" type="audio/mp3"  >
+                    </audio>
+
+         
+                </mat-card-content>
+        
+       
+            
+           
+        </mat-card>
+        
+    </section>
+    <div class="page">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>

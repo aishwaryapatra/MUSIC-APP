@@ -1,0 +1,91 @@
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet">
+<div class='ht'>
+<div class="card">
+    <h1 class="design2">Register <i class="fa fa-user-plus" aria-hidden="true"></i></h1>
+    <hr />
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group row">
+            <label for="colFormLabelLg" class="col-lg-4 col-form-label col-form-label-lg"> First Name: </label>
+            <div>
+                <input type="text" formControlName="firstName" class="form-control a firstName" MatInput
+                    [formControl]="firstName" />
+                <small *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="alert">
+                    <small *ngIf="firstName.errors.required">
+                        Enter FirstName.
+                    </small>
+                    <small *ngIf="firstName.errors.pattern">
+                        First Name is Invalid
+                    </small>
+                </small>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="colFormLabelLg" class="col-lg-4 col-form-label col-form-label-lg">Last Name: </label>
+            <div>
+                <input type="text" formControlName="lastName" class="form-control a lastName" MatInput
+                    [formControl]="lastName" />
+                <small *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="alert">
+                    <small *ngIf="lastName.errors.required">
+                        Enter LastName.
+                    </small>
+                    <small *ngIf="lastName.errors.pattern">
+                        LastName is Invalid
+                    </small>
+                </small>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="colFormLabelLg" class="col-lg-4 col-form-label col-form-label-lg">Email:</label>
+            <div>
+                <input type="email" formControlName="email" class="form-control a email" MatInput [formControl]="email" />
+                <small *ngIf="email.invalid && (email.dirty || email.touched)" class="alert">
+                    <small *ngIf="email.errors.required">
+                        Email is a mandatory.
+                    </small>
+                </small>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="colFormLabelLg" class="col-lg-4 col-form-label col-form-label-lg">Password: </label>
+            <div>
+                <input type="password" formControlName="password" class="form-control a password" MatInput
+                    [formControl]="password" />
+                <small *ngIf="password.invalid && (password.dirty || password.touched)">
+                    <small *ngIf="password.errors.required" class="alert size2">
+                        Enter Password
+                    </small>
+                    <small *ngIf="password.errors.minlength">
+                        It should be minimum 4 characters
+                    </small>
+                </small>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="colFormLabelLg" class="col-lg-4 col-form-label col-form-label-lg">Gender: </label>
+            <div class="form-check-inline">
+                <input type="radio" formControlName="gender" class="form-control b" value="male" name="gender" /><i
+                    class="fa fa-male gender" aria-hidden="true" ></i>
+                <input type="radio" formControlName="gender" class="form-control b" value="female" name="gender" /><i
+                    class="fa fa-female gender" aria-hidden="true"></i>
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.gender.errors.required">Gender is required</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="colFormLabelLg" class="col-lg-4 col-form-label col-form-label-lg"> Upload an image:</label>
+            <div class="col-lg-5">
+                <input #fileInput type="file" formControlName="image" (change)="fileSelected($event)" />
+            </div>
+        </div>
+        <div class="form-group">
+            <button [disabled]="!registerForm.valid" class="btn btn-primary design">Sign Me Up! <i class="fa fa-sign-in"
+                    aria-hidden="true"></i></button>
+        </div>
+    </form>
+</div>
+</div>
+<!-- <app-footer-comp></app-footer-comp> -->

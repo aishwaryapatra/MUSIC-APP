@@ -1,0 +1,27 @@
+.newrelease-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.mat-card {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+h1 {
+    font-family: 'Courgette', cursive; 
+
+    text-align: center;
+    margin-top: 0%;
+}
+img {
+    width: 60%;
+    height: 60%;
+    margin-left: 50px;
+}
+.page {
+    display: flex !important;
+    justify-content: center !important;
+    padding-top: 30px;
+}
+.marginmatcard{
+    margin-top: auto;
+}

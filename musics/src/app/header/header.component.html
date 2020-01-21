@@ -1,0 +1,36 @@
+<link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<span>
+ <nav class="navbar navbar-custom">
+    <button mat-raised-button color="accent" routerLink="home">
+        <mat-icon>home</mat-icon>
+        
+    </button>
+    <a class="navbar-brand" >MUsic</a>
+    <form class="form-inline" id="demo-2">
+            <input type="search" name="Search"  (keypress)="searchStorage($event)" > 
+
+   
+    </form> 
+    <div *ngIf="service.isLoggedIn">
+            <!-- <button class="btny" (click)="tologout()">Logout</button> -->
+            <button mat-raised-button color="accent" (click)="todasboard()"> Dashboard </button>
+            <button mat-raised-button color="accent" (click)="tologout()"> Logout </button>
+
+         
+  </div>
+
+  <div *ngIf="!service.isLoggedIn">
+                <button mat-raised-button color="accent" (click)="tologin()"> <mat-icon>perm_identity</mat-icon> </button>
+                <button mat-raised-button color="accent" (click)="toregister()"> Register </button>
+                
+            <!-- <button class="btny" (click)="tologin()">Login</button> -->
+            <!-- <button class="btny" (click)="toregister()">Register</button> -->
+  </div>
+
+</nav>
+
+</span> 
+
+
+

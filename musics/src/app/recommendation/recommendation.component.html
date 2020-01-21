@@ -1,0 +1,60 @@
+<link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<h1>Recommendations <span class="badge badge-secondary">for you</span></h1>
+
+
+        <div class="bodyClass">
+          <ngb-carousel   >
+              <ng-template ngbSlide *ngFor="let each of  this.arrayCount;let i=index" id={{i}}>
+                  <img src={{each.image}} alt="image not available" class="w-100">
+                  <div class="carousel-caption">
+                    <h2>{{each.artistSongName}}</h2>
+                    <p>Follewed By :{{each.recommendationCount}} <br>
+                      {{each.albumSingle}}, by {{each.artist_name}}
+
+
+                    </p>
+                  </div>
+              </ng-template>
+          </ngb-carousel>
+      </div>
+      <div class="container-table100">
+        <div class="wrap-table100">
+        <table class="table table-striped" style='color:whitesmoke;font-size:30px;' >
+              <thead style='background-color: black'>
+              <tr >
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Artist</th>
+                <th scope="col">Follow Count</th>
+                <th scope="col">Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let each of  this.arrayCount; let i=index">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>
+                 
+                  {{each.artistSongName}}
+                </td>
+                <td>{{each.artist_name}}</td>
+                <td>{{each.recommendationCount}}</td>
+                <td>
+                  <ul style="list-style-type:none;">
+                    <li>
+                        <!-- <a (click)="playSound(item.trackSingle)"> Play</a> -->
+                      <audio controls id="{{each.artistSongName}}">
+                          <source src="{{each.trackSingle}}" type="audio/mp3"  >
+                      </audio>
+                    
+        
+                    </li>
+ 
+                    <!-- <li><button mat-raised-button (click)="Onclick(item)">Comment</button></li> -->
+                  </ul>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+           </div>
+   </div>

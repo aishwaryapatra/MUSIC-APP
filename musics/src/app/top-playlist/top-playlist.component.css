@@ -1,0 +1,13 @@
+.playlist-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.mat-card{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+h1 {
+    font-family: 'Courgette', cursive; 
+    text-align: left;
+    margin-top: 0%;
+}

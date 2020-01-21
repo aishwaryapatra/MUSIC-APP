@@ -1,0 +1,51 @@
+.card-body {
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    
+}
+.card mb-3{
+    background-color: rgba(255, 255, 255, 0.6) !important;
+}
+.insidematcard mat-card{
+    background-color: rgba(255, 255, 255, 0.6);
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+
+
+    
+  
+    
+}
+.insidematcard{
+    align-self: center;
+    padding-left: 300px;
+}
+.section{
+    display: flex !important;
+    justify-content: space-evenly;
+    flex-direction: row;
+    
+}
+h2, h3{
+        font-family: 'Courgette', cursive; 
+}
+.inside{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.card1{
+    
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    opacity: 0.6;
+  
+}
+.check{
+    display: flex !important;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.card-color{
+    background-color: cornsilk;
+    opacity: 0.6;
+}

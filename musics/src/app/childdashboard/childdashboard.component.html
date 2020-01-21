@@ -1,0 +1,47 @@
+<link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<mat-tab-group>
+        <mat-tab label="Overview"> 
+
+               <div class="card-group">
+                    <div class="col-3 mx-auto text-center">
+                            <img [src]="imgURL" alt="Avatar"> 
+                    </div>
+
+                    </div>
+                <div class="card-group">
+                        <div class="card">
+                          
+                          <div class="card-body">
+                            <h5 class="card-title"><strong>Favourites</strong><mat-icon>favorite</mat-icon></h5>
+                            <p class="card-text">Listen to your favourites! <a [routerLink]="'./favourites'" class="btn btn-primary">Let's go!</a></p>
+                        
+                          </div>
+                        </div>
+                        <div class="card">
+                       
+                          <div class="card-body">
+                            <h5 class="card-title"><strong>We have Recommendations for you!<mat-icon>speaker_group</mat-icon></strong></h5>
+                            <p class="card-text">Listen to the most loved songs of today!<a [routerLink]="'./recommendation'" class="btn btn-primary">Let's go!</a></p>
+                  
+                          </div>
+                        </div>
+                        <div class="card">
+          
+                          <div class="card-body">
+                            <h5 class="card-title"><strong>Country Special!<mat-icon>album</mat-icon></strong></h5>
+                            <p class="card-text">We have songs for you from across the globe!<a [routerLink]="'./countrycode'" class="btn btn-primary">Let's go!</a></p>
+                      
+                          </div>
+                        </div>
+              </div>
+           
+                     
+        </mat-tab>
+<!-- 
+        <mat-tab label="Second"> Content 2 </mat-tab>
+        <mat-tab label="Third"> Content 3 </mat-tab> -->
+  </mat-tab-group>
+
+  
+  

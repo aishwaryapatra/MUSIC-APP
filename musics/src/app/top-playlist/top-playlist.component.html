@@ -1,0 +1,14 @@
+<link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<section class="playlist-section">
+    <h1>Featured Albums</h1>
+    <mat-card class="cardstyle" *ngFor="let item of arr">
+         
+        <mat-card-title>{{item.name}}</mat-card-title>
+        <mat-card-content ><img src="{{item.image_url}}"></mat-card-content>
+        
+        
+    </mat-card>
+</section>
+

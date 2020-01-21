@@ -1,0 +1,16 @@
+
+
+<section class="check_">
+    <app-header *ngIf="route.url !== '/hover'"></app-header>
+    <router-outlet>
+        
+    </router-outlet>
+    <!-- <app-footer-comp></app-footer-comp> -->
+    <!-- <app-footer-comp *ngIf="route.url !== '/hover' && route.url !== '/dashboard/favourites'"></app-footer-comp> -->
+    <app-footer-comp *ngIf="route.url !== '/hover' && route.url !== '/home'"></app-footer-comp>
+   
+</section>
+
+
+
+

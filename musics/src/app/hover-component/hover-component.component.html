@@ -1,0 +1,80 @@
+<link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<mat-toolbar>
+        <mat-toolbar-row >
+            <span style>
+            MUsic
+            </span>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    
+<mat-sidenav-container #sidenav>
+<section class="card_decorator" > 
+    <div class="card-columns">
+            <div class="card">
+              <img id="img" class="card-img-top" src="../assets/afrojack.png" alt="Card image cap" (click)="Home()">
+              <div class="card-body">
+                <h5 class="card-title">Aldous Huxley</h5>
+                <p class="card-text">“After silence, that which comes nearest to expressing the inexpressible is music.”</p>
+              </div>
+            </div>
+            <div class="card p-3">
+              <img class="card-img-top" src="../assets/coldplay.png" alt="Card image cap" (click)="Home()">
+              <blockquote class="blockquote mb-0 card-body">
+                <p>Music is to the soul what words are to the mind.</p>
+                <footer class="blockquote-footer">
+                  <small class="text-muted">
+                    Modest Mouse <cite title="Source Title"></cite>
+                  </small>
+                </footer>
+              </blockquote>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="../assets/billie.png" alt="Card image cap" (click)="Home()">
+              <div class="card-body">
+                <h3 class="card-title">Billie</h3>
+                <p class="card-text">“Music expresses that which cannot be put into words and that which cannot remain silent”</p>
+           
+              </div>
+            </div>
+            <div class="card bg-primary text-white text-center p-3">
+              <blockquote class="blockquote mb-0">
+                <h3>Bringing to you the best of 2020!</h3>
+              </blockquote>
+            </div>
+            <div class="card text-center">
+              <div class="card-body">
+             
+                <h3>Explore the beats!</h3>
+                <button type="button" class="btn btn-dark"style="margin-bottom:10px;" [routerLink]="'../home'" id="gotohome">Go To HomePage</button>
+                <br>
+                <button type="button" class="btn btn-dark"style="margin-bottom:10px;" [routerLink]="'../login'">Already a member?</button><br>
+                <strong>or</strong>
+                <strong><a [routerLink]="'../register'"><h4>Sign me up!</h4></a></strong>
+    
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img" src="../assets/selena.jpg" alt="Card image" (click)="Home()" >
+              <div class="card p-3 text-right">
+                    <blockquote class="blockquote mb-0">
+                      <p>There is two kinds of music, the goood and the bad and I play the good one.</p>
+                      <footer class="blockquote-footer">
+                        <small class="text-muted">
+                            Victor Hugo <cite title="Source Title"></cite>
+                        </small>
+                      </footer>
+                    </blockquote>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="../assets/ed.jpeg" alt="Card image cap" (click)="Home()">
+            
+              <div class="card-body">
+                <h5 class="card-title">Johann Sebastian Bach</h5>
+                <p class="card-text">“Music is an agreeable harmony for the honor of God and the permissible delights of the soul.”</p>
+              </div>
+            </div>
+          </div>
+</section>
+</mat-sidenav-container>

@@ -1,0 +1,25 @@
+p, h5, h3, a{
+    font-family: 'Courgette', cursive !important; 
+
+}
+mat-toolbar {
+    background-color: rgb(252, 198, 52) !important;
+    opacity:0.6;
+    font-family: 'Courgette', cursive; 
+}
+.card_decorator{
+    background-image: url('../../assets/y2.jpg');
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    opacity: 0.6;
+
+}
+p, h5, h3, button{
+    font-family: 'Courgette', cursive; 
+
+}
+button{
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+}

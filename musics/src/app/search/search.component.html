@@ -1,0 +1,122 @@
+<link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+<h2>Explore the beats!</h2>
+<h3>Your personalised homepage surfaces all the music you’re sure to love in one handy place — check out your recommendations below and start listening. The more you listen, the better your recommendations will get!</h3>
+<mat-tab-group [selectedIndex]="this.selected" (selectedIndexChange)="selected.setValue($event)" > 
+
+        <mat-tab label = "Artist"> 
+                <div class="card-body">
+                  
+          
+                    <div class="card mb-3" style="max-width: 1024px;">
+                        <div class="row no-gutters">
+                          <div class="col-md-4">
+                            <img src="{{this.objArtist.image}}" class="card-img" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">{{this.objArtist.artist_name}}</h5>
+                              <p class="card-text">{{this.artistDetails}}</p>
+                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div> 
+                   
+                    
+                        <mat-expansion-panel>
+                          <mat-expansion-panel-header>
+                            <mat-panel-title>
+                              Featured tracks
+                            </mat-panel-title>
+                    
+                          </mat-expansion-panel-header>
+                          <mat-expansion-panel *ngFor="let item2 of this.objArtist.song_name">
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                Song Name: {{item2[0]}}
+
+                          
+          
+                              </mat-panel-title>
+                            </mat-expansion-panel-header>
+                              <mat-card-content>
+                               <div class="section">
+                                Album Name:{{item2[2]}}
+                                <i class="fa fa-youtube" style="font-size:48px;color:red"(click)="searchYoutube(item2,this.objArtist.artist_name)"></i>
+                                <audio controls >
+                                        <source src="{{item2[1]}}" type="audio/mp3" >
+                                        
+                
+                                </audio> 
+                                <button mat-icon-button (click)="click_fav(this.objArtist,this.item2)" >
+                                        <mat-icon>favorite</mat-icon>
+                
+                                </button>
+                                <mat-slide-toggle  (change)="recommend(this.item2,this.objArtist.artist_name,this.objArtist)">Slide to recommend</mat-slide-toggle>
+                            </div>
+                            </mat-card-content>
+
+                             
+                           
+                        </mat-expansion-panel>
+                        </mat-expansion-panel>
+                         
+                         
+                     
+                </div>
+          
+          
+            </mat-tab>
+
+  <mat-tab >
+      <ng-template mat-tab-label>
+          <span (click)="randomSearch()">Album</span>
+      </ng-template>
+      <div class="card-columns" >
+            <div class="card" *ngFor = "let item2 of this.searchqueryObject | paginate: { itemsPerPage:9, currentPage:p}" >
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title"> {{item2.artistSongName}}</h5>
+               
+                        <audio controls >
+                                <source src="{{item2.trackSingle}}" type="audio/mp3" >
+            
+                      </audio>
+               
+              </div>
+     </div>
+    </div>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      
+              
+  </mat-tab>
+  <mat-tab> 
+      <ng-template mat-tab-label>
+          <span (click)="execute()">Video</span>
+      </ng-template>
+      <!-- <div class="card" style="width: 22rem;"> -->
+      <div class="insidematcard">
+        <mat-card class="mat-card">
+            <iframe width="950" height="600" [src]="this.safeURL" frameborder="0" allowfullscreen></iframe>
+
+        </mat-card>
+      </div>
+          
+
+      <!-- < -->
+  </mat-tab>
+</mat-tab-group>
+
+
+
+
+
+
+

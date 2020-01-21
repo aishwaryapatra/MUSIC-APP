@@ -1,0 +1,6 @@
+.class_{
+    background-image: url('../../assets/y2.jpg');
+    background-attachment: fixed!important;
+    background-size: cover !important;
+overflow:hidden;
+}
