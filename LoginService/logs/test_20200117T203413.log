@@ -1,0 +1,12 @@
+17 January 
+ INFO  c.p.controller.UserControllerTest -
+                Starting UserControllerTest on ibmwave10ankita-ThinkPad-T450 with PID 17676 (started by ibm-wave10-ankita in /home/ibm-wave10-ankita/Desktop/FSD/JAVA/Musics/LoginService)
+17 January 
+ DEBUG c.p.controller.UserControllerTest -
+                Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+17 January 
+ INFO  c.p.controller.UserControllerTest -
+                No active profile set, falling back to default profiles: default
+17 January 
+ INFO  c.p.controller.UserControllerTest -
+                Started UserControllerTest in 2.506 seconds (JVM running for 4.503)

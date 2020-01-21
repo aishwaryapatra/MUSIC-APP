@@ -1,0 +1,64 @@
+version: '3'
+services:
+#   container for mysql
+  databasemysql:
+    image: mysql:8.0.17
+    restart: always
+    ports:
+      - "3306:3306"
+    container_name: mysql-doc
+    network_mode: host
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: dbuser1
+      MYSQL_PASSWORD: pass
+      MYSQL_DATABASE: testdb
+
+#    container for momgo
+  databasemongo:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    container_name: mongo-con
+    network_mode: host
+    environment:
+      MONGO_DATABASE: noteDb
+
+#   container for test service
+  testservice1:
+      build:
+        dockerfile: Dockerfile
+        context:  ./LoginService
+      container_name: login-docker
+      network_mode: host
+      restart: always
+      ports:
+       - "8002:8002"
+      depends_on:
+        - databasemysql
+        
+#   container for user service
+  testservice2:
+      build: 
+        dockerfile: Dockerfile
+        context:  ./MusicService
+      container_name: music-docker
+      network_mode: host
+      restart: always
+      ports:
+       - "8001:8001"
+      depends_on:
+        - databasemongo
+        
+# container for front end 
+  angular-frontend:
+    build:
+       dockerfile: Dockerfile
+       context:  ./musics
+    container_name: angular-docker
+    network_mode: host
+    restart: always
+    ports:
+       - "8006:8006"
+    

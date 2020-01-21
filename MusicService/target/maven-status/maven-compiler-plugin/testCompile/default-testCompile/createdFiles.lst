@@ -1,0 +1,9 @@
+com/project/model/UserFavTest.class
+com/project/service/UserFavTest.class
+com/project/service/MusicFavServiceImplTest.class
+com/project/service/RecommendationTest.class
+com/project/model/RecommendTest.class
+com/project/service/CommentServiceTest.class
+com/project/model/CommentTest.class
+com/project/controller/MusicFavControllerTest.class
+com/project/model/MusicFavTest.class
